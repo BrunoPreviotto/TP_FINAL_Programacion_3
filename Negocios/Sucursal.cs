@@ -51,6 +51,7 @@ namespace Negocios
         {
             int resultado = 0;
             
+            
             if(this.id_suc == 0 && Sucursal_m.ValidarNombre(this.nombre))
             {
                 resultado = Sucursal_m.Guardar(id_suc, nombre);

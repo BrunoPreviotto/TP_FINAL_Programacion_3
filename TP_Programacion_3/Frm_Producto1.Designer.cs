@@ -109,7 +109,7 @@ namespace TP_Programacion_3
             // 
             // boton_buscar
             // 
-            this.boton_buscar.Location = new System.Drawing.Point(309, 61);
+            this.boton_buscar.Location = new System.Drawing.Point(364, 61);
             this.boton_buscar.Name = "boton_buscar";
             this.boton_buscar.Size = new System.Drawing.Size(75, 23);
             this.boton_buscar.TabIndex = 8;
@@ -118,7 +118,7 @@ namespace TP_Programacion_3
             // 
             // boton_salir
             // 
-            this.boton_salir.Location = new System.Drawing.Point(520, 61);
+            this.boton_salir.Location = new System.Drawing.Point(500, 61);
             this.boton_salir.Name = "boton_salir";
             this.boton_salir.Size = new System.Drawing.Size(75, 23);
             this.boton_salir.TabIndex = 10;

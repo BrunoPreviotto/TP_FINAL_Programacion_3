@@ -68,7 +68,26 @@ namespace TP_Programacion_3
             }
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_proveedor1);
+            if (form != null)
+            {
+                form.BringToFront();
+                return;
+            }
+            else
+            {
+                form = new Frm_proveedor1();
+                form.MdiParent = this;
+                form.Show();
+                form.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form form = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Producto1);
             if (form != null)
@@ -85,9 +104,9 @@ namespace TP_Programacion_3
             }
         }
 
-        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_proveedor1);
+            Form form = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_AgregarProducto);
             if (form != null)
             {
                 form.BringToFront();
@@ -95,7 +114,7 @@ namespace TP_Programacion_3
             }
             else
             {
-                form = new Frm_proveedor1();
+                form = new Frm_AgregarProducto();
                 form.MdiParent = this;
                 form.Show();
                 form.WindowState = FormWindowState.Normal;
