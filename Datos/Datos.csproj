@@ -47,6 +47,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Marca_m.cs" />
     <Compile Include="Producto_m.cs" />
+    <Compile Include="Proveedor_m.cs" />
     <Compile Include="Sucursal_m.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
