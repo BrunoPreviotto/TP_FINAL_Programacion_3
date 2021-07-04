@@ -29,7 +29,6 @@ namespace TP_Programacion_3
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.caja_descripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.boton_eliminar = new System.Windows.Forms.Button();
@@ -38,39 +37,28 @@ namespace TP_Programacion_3
             this.etiqueta_direccion = new System.Windows.Forms.Label();
             this.caja_nombre = new System.Windows.Forms.TextBox();
             this.lab = new System.Windows.Forms.Label();
-            this.caja_proveedor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.caja_precio = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.caja_id_producto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 210);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Proveedor";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // caja_descripcion
             // 
-            this.caja_descripcion.Location = new System.Drawing.Point(117, 113);
+            this.caja_descripcion.Location = new System.Drawing.Point(117, 94);
             this.caja_descripcion.Multiline = true;
             this.caja_descripcion.Name = "caja_descripcion";
             this.caja_descripcion.Size = new System.Drawing.Size(100, 55);
             this.caja_descripcion.TabIndex = 23;
-            this.caja_descripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 113);
+            this.label1.Location = new System.Drawing.Point(45, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "Descripcion";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // boton_eliminar
             // 
@@ -80,7 +68,6 @@ namespace TP_Programacion_3
             this.boton_eliminar.TabIndex = 21;
             this.boton_eliminar.Text = "Eliminar";
             this.boton_eliminar.UseVisualStyleBackColor = true;
-            this.boton_eliminar.Click += new System.EventHandler(this.boton_eliminar_Click);
             // 
             // boton_agregar
             // 
@@ -98,47 +85,36 @@ namespace TP_Programacion_3
             this.caja_marca.Name = "caja_marca";
             this.caja_marca.Size = new System.Drawing.Size(100, 20);
             this.caja_marca.TabIndex = 19;
-            this.caja_marca.TextChanged += new System.EventHandler(this.caja_direccion_TextChanged);
             // 
             // etiqueta_direccion
             // 
             this.etiqueta_direccion.AutoSize = true;
-            this.etiqueta_direccion.Location = new System.Drawing.Point(45, 75);
+            this.etiqueta_direccion.Location = new System.Drawing.Point(45, 68);
             this.etiqueta_direccion.Name = "etiqueta_direccion";
             this.etiqueta_direccion.Size = new System.Drawing.Size(37, 13);
             this.etiqueta_direccion.TabIndex = 18;
             this.etiqueta_direccion.Text = "Marca";
-            this.etiqueta_direccion.Click += new System.EventHandler(this.etiqueta_direccion_Click);
             // 
             // caja_nombre
             // 
-            this.caja_nombre.Location = new System.Drawing.Point(117, 20);
+            this.caja_nombre.Location = new System.Drawing.Point(117, 42);
             this.caja_nombre.Name = "caja_nombre";
             this.caja_nombre.Size = new System.Drawing.Size(100, 20);
             this.caja_nombre.TabIndex = 17;
-            this.caja_nombre.TextChanged += new System.EventHandler(this.caja_nombre_TextChanged);
             // 
             // lab
             // 
             this.lab.AutoSize = true;
-            this.lab.Location = new System.Drawing.Point(45, 27);
+            this.lab.Location = new System.Drawing.Point(45, 49);
             this.lab.Name = "lab";
             this.lab.Size = new System.Drawing.Size(44, 13);
             this.lab.TabIndex = 16;
             this.lab.Text = "Nombre";
-            this.lab.Click += new System.EventHandler(this.lab_Click);
-            // 
-            // caja_proveedor
-            // 
-            this.caja_proveedor.Location = new System.Drawing.Point(117, 203);
-            this.caja_proveedor.Name = "caja_proveedor";
-            this.caja_proveedor.Size = new System.Drawing.Size(100, 20);
-            this.caja_proveedor.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 250);
+            this.label3.Location = new System.Drawing.Point(52, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 26;
@@ -146,20 +122,38 @@ namespace TP_Programacion_3
             // 
             // caja_precio
             // 
-            this.caja_precio.Location = new System.Drawing.Point(117, 243);
+            this.caja_precio.Location = new System.Drawing.Point(117, 155);
             this.caja_precio.Name = "caja_precio";
             this.caja_precio.Size = new System.Drawing.Size(100, 20);
             this.caja_precio.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(45, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Nro Producto";
+            // 
+            // caja_id_producto
+            // 
+            this.caja_id_producto.Enabled = false;
+            this.caja_id_producto.Location = new System.Drawing.Point(117, 16);
+            this.caja_id_producto.Name = "caja_id_producto";
+            this.caja_id_producto.Size = new System.Drawing.Size(100, 20);
+            this.caja_id_producto.TabIndex = 29;
+            this.caja_id_producto.Text = "0";
             // 
             // Frm_AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(592, 315);
+            this.Controls.Add(this.caja_id_producto);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.caja_precio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.caja_proveedor);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.caja_descripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boton_eliminar);
@@ -176,7 +170,6 @@ namespace TP_Programacion_3
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox caja_descripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button boton_eliminar;
@@ -185,8 +178,9 @@ namespace TP_Programacion_3
         private System.Windows.Forms.Label etiqueta_direccion;
         private System.Windows.Forms.TextBox caja_nombre;
         private System.Windows.Forms.Label lab;
-        private System.Windows.Forms.TextBox caja_proveedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox caja_precio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox caja_id_producto;
     }
 }

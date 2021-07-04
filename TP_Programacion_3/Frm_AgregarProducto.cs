@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace TP_Programacion_3
 {
@@ -17,54 +18,36 @@ namespace TP_Programacion_3
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boton_eliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void boton_agregar_Click(object sender, EventArgs e)
         {
+            string nombre = caja_nombre.Text.Trim();
+            string descripcion = caja_descripcion.Text.Trim();
+            string marca = caja_marca.Text.Trim();
+            double precio = Double.Parse(caja_precio.Text.Trim());
+            int id = Int32.Parse(caja_id_producto.Text.Trim());
 
-        }
+            Producto producto = new Producto(id, nombre, descripcion, marca, precio);
+            
+            bool estado = producto.Guardar();
 
-        private void caja_direccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void etiqueta_direccion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void caja_nombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (estado)
+            {
+                Funciones.MOK(this, producto.Mensaje);
+                caja_nombre.Text = "";
+                caja_descripcion.Text = "";
+                caja_marca.Text = "";
+                caja_precio.Text = "";
+                caja_id_producto.Text = "0";
+            }
+            else
+            {
+                Funciones.MError(this, producto.Mensaje);
+                caja_nombre.Text = "";
+                caja_descripcion.Text = "";
+                caja_marca.Text = "";
+                caja_precio.Text = "";
+                caja_id_producto.Text = "0";
+            }
         }
     }
 }

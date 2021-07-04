@@ -57,7 +57,7 @@ namespace Datos
 
         private static int Modificar(int pid, string pnombre, string pdescripcion, char pbaja)
         {
-            string sql = "Update Sucursales SET nombre = @nombre, descripcion = @descripcion, baja = @baja Where id = @id";
+            string sql = "Update Marcas SET nombre = @nombre, descripcion = @descripcion, baja = @baja Where id = @id";
             try
             {
                 Conexion cx = new Conexion();
