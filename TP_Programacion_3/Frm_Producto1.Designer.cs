@@ -33,14 +33,22 @@ namespace TP_Programacion_3
             this.caja_producto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.caja_marca = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_minorista = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_mayorista = new System.Windows.Forms.DataGridView();
             this.caja_precio = new System.Windows.Forms.TextBox();
             this.etiqueta_precio = new System.Windows.Forms.Label();
             this.boton_buscar = new System.Windows.Forms.Button();
             this.boton_salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nombre_mayorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca_mayorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio_mayorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_minorista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_mayorista)).BeginInit();
             this.SuspendLayout();
             // 
             // etiqueta_producto
@@ -75,21 +83,47 @@ namespace TP_Programacion_3
             this.caja_marca.Size = new System.Drawing.Size(100, 20);
             this.caja_marca.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgv_minorista
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 125);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(510, 193);
-            this.dataGridView1.TabIndex = 4;
+            this.dgv_minorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_minorista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.marca,
+            this.precio});
+            this.dgv_minorista.Location = new System.Drawing.Point(69, 125);
+            this.dgv_minorista.Name = "dgv_minorista";
+            this.dgv_minorista.Size = new System.Drawing.Size(510, 193);
+            this.dgv_minorista.TabIndex = 4;
             // 
-            // dataGridView2
+            // nombre
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(69, 349);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(510, 159);
-            this.dataGridView2.TabIndex = 5;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // marca
+            // 
+            this.marca.DataPropertyName = "marca";
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "precio";
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            // 
+            // dgv_mayorista
+            // 
+            this.dgv_mayorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_mayorista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre_mayorista,
+            this.marca_mayorista,
+            this.precio_mayorista});
+            this.dgv_mayorista.Location = new System.Drawing.Point(69, 349);
+            this.dgv_mayorista.Name = "dgv_mayorista";
+            this.dgv_mayorista.Size = new System.Drawing.Size(510, 159);
+            this.dgv_mayorista.TabIndex = 5;
             // 
             // caja_precio
             // 
@@ -115,6 +149,7 @@ namespace TP_Programacion_3
             this.boton_buscar.TabIndex = 8;
             this.boton_buscar.Text = "Buscar";
             this.boton_buscar.UseVisualStyleBackColor = true;
+            this.boton_buscar.Click += new System.EventHandler(this.boton_buscar_Click);
             // 
             // boton_salir
             // 
@@ -125,17 +160,55 @@ namespace TP_Programacion_3
             this.boton_salir.Text = "Salir";
             this.boton_salir.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Proveedor Minorista";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(69, 333);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Proveedor Mayorista";
+            // 
+            // nombre_mayorista
+            // 
+            this.nombre_mayorista.DataPropertyName = "nombre";
+            this.nombre_mayorista.HeaderText = "Nombre";
+            this.nombre_mayorista.Name = "nombre_mayorista";
+            // 
+            // marca_mayorista
+            // 
+            this.marca_mayorista.DataPropertyName = "marca";
+            this.marca_mayorista.HeaderText = "Marca";
+            this.marca_mayorista.Name = "marca_mayorista";
+            // 
+            // precio_mayorista
+            // 
+            this.precio_mayorista.DataPropertyName = "precio";
+            this.precio_mayorista.HeaderText = "Precio";
+            this.precio_mayorista.Name = "precio_mayorista";
+            // 
             // Frm_Producto1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 520);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.boton_salir);
             this.Controls.Add(this.boton_buscar);
             this.Controls.Add(this.etiqueta_precio);
             this.Controls.Add(this.caja_precio);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_mayorista);
+            this.Controls.Add(this.dgv_minorista);
             this.Controls.Add(this.caja_marca);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.caja_producto);
@@ -143,8 +216,8 @@ namespace TP_Programacion_3
             this.Name = "Frm_Producto1";
             this.Text = "Frm_Producto1";
             this.Load += new System.EventHandler(this.Frm_Producto1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_minorista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_mayorista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,11 +229,19 @@ namespace TP_Programacion_3
         private System.Windows.Forms.TextBox caja_producto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox caja_marca;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_minorista;
+        private System.Windows.Forms.DataGridView dgv_mayorista;
         private System.Windows.Forms.TextBox caja_precio;
         private System.Windows.Forms.Label etiqueta_precio;
         private System.Windows.Forms.Button boton_buscar;
         private System.Windows.Forms.Button boton_salir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_mayorista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marca_mayorista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio_mayorista;
     }
 }

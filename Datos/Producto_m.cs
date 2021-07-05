@@ -99,41 +99,37 @@ namespace Datos
         }
 
 
-
-
-
-
-
         
 
 
-
-
-
-
-
-
-
-        public bool ValidarMarca(string marca)
+        public static DataTable TraerTodos()
         {
-            bool existe = false;
-            string val = "";
-            string sql = $"SELECT nombre FROM Marcas where nombre = '{marca}' ";
+            DataTable dtListaAll = new DataTable("Productos");
+            string sql = "SELECT nombre, marca, precio FROM Productos INNER JOIN Pruductos_Proveedores ON Productos.id = Pruductos_Proveedores.id_producto AND Pruductos_Proveedores.tipo = 'Minorista'";
             try
             {
                 Conexion Cx = new Conexion();
                 Cx.SetCommandText();
                 Cx.SetSql(sql);
-                int count = Convert.ToInt32(Cx.Comando().ExecuteScalar());
-                existe = count == 0;
+                SqlDataAdapter sqlData = new SqlDataAdapter(Cx.Comando());
+                sqlData.Fill(dtListaAll);
             }
             catch (Exception)
             {
-                existe = false;    
+                dtListaAll = null;
+
             }
 
-            return existe;
+            return dtListaAll;
 
         }
+
+
+
+
+
+
+
     }
+    
 }

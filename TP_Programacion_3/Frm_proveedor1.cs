@@ -97,8 +97,21 @@ namespace TP_Programacion_3
             string[] id_producto = caja_id_productos.Text.Trim().Split(' ');
             string id_proveedor = caja_id_proveedor_producto.Text.Trim();
 
-            Proveedor_Producto pp = new Proveedor_Producto(int.Parse(id_proveedor), id_producto);
-            estado = pp.Guardar();
+            Proveedor_Producto pp = new Proveedor_Producto(int.Parse(id_proveedor), id_producto, cb_agregar_pp.Text.Trim());
+            bool estado = pp.Guardar();
+
+            if (estado)
+            {
+                Funciones.MOK(this, pp.Mensaje);
+                caja_id_proveedor_producto.Text = "";
+                caja_id_productos.Text = "";
+            }
+            else
+            {
+                Funciones.MError(this, pp.Mensaje);
+                caja_id_productos.Text = "";
+                caja_id_proveedor_producto.Text = "";
+            }
         }
 
         private void cb_tipo_proveedor_SelectionChangeCommitted(object sender, EventArgs e)

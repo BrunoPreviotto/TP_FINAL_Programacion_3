@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace TP_Programacion_3
 {
@@ -15,6 +16,10 @@ namespace TP_Programacion_3
         public Frm_Producto1()
         {
             InitializeComponent();
+
+            dgv_minorista.DataSource = Producto.TraerTodos();
+
+            
         }
 
         private void Frm_Producto1_Load(object sender, EventArgs e)
@@ -22,6 +27,9 @@ namespace TP_Programacion_3
 
         }
 
-        
+        private void boton_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

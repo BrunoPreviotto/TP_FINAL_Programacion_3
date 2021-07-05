@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Collections;
 using Negocios.Proveedores;
 using Datos;
+using System.Data;
+
 
 namespace Negocios
 {
@@ -32,6 +34,11 @@ namespace Negocios
         }
 
 
+        public static DataTable TraerTodos()
+        {
+            return Producto_m.TraerTodos();
+        }
+
         public bool Guardar()
         {
             int resultado = 0;
@@ -54,11 +61,7 @@ namespace Negocios
             }
         }
 
-        public bool ValidarMarca(string marca)
-        {
-            Producto_m producto_m = new Producto_m();
-            return producto_m.ValidarMarca(marca);
-        }
+        
 
 
     }

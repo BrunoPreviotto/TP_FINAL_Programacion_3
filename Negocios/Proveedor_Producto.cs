@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Datos;
+
 namespace Negocios
 {
     public class Proveedor_Producto
@@ -11,25 +13,22 @@ namespace Negocios
 
         private int id_proveedor;
         private string[] id_productos;
+        private string tipo_proveedor;
         private string mensaje;
 
         public string Mensaje { get => mensaje; set => mensaje = value; }
 
-        public Proveedor_Producto(int id_proveedor, string [] id_producto) 
+        public Proveedor_Producto(int id_proveedor, string [] id_producto, string tipo_proveedor) 
         {
             this.id_proveedor = id_proveedor;
             this.id_productos = id_producto;
+            this.tipo_proveedor = tipo_proveedor;
         }
 
         public bool Guardar()
         {
-            int resultado = ;
+            int resultado = Proveedor_Producto_m.Guardar(id_proveedor, id_productos, tipo_proveedor);
 
-
-            if (this.id_suc == 0 && Sucursal_m.ValidarNombre(this.nombre))
-            {
-                resultado = Sucursal_m.Guardar(id_suc, nombre);
-            }
 
             if (resultado > 0)
             {

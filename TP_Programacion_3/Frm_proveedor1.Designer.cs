@@ -56,6 +56,8 @@ namespace TP_Programacion_3
             this.caja_id_proveedor_producto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.boton_agregar_producto = new System.Windows.Forms.Button();
+            this.cb_agregar_pp = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,7 +289,7 @@ namespace TP_Programacion_3
             // 
             // boton_agregar_producto
             // 
-            this.boton_agregar_producto.Location = new System.Drawing.Point(357, 438);
+            this.boton_agregar_producto.Location = new System.Drawing.Point(357, 471);
             this.boton_agregar_producto.Name = "boton_agregar_producto";
             this.boton_agregar_producto.Size = new System.Drawing.Size(75, 23);
             this.boton_agregar_producto.TabIndex = 30;
@@ -295,11 +297,33 @@ namespace TP_Programacion_3
             this.boton_agregar_producto.UseVisualStyleBackColor = true;
             this.boton_agregar_producto.Click += new System.EventHandler(this.boton_agregar_producto_Click);
             // 
+            // cb_agregar_pp
+            // 
+            this.cb_agregar_pp.FormattingEnabled = true;
+            this.cb_agregar_pp.Items.AddRange(new object[] {
+            "Minorista",
+            "Mayorista"});
+            this.cb_agregar_pp.Location = new System.Drawing.Point(311, 444);
+            this.cb_agregar_pp.Name = "cb_agregar_pp";
+            this.cb_agregar_pp.Size = new System.Drawing.Size(121, 21);
+            this.cb_agregar_pp.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(246, 452);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(28, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Tipo";
+            // 
             // Frm_proveedor1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 506);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cb_agregar_pp);
             this.Controls.Add(this.boton_agregar_producto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.caja_id_proveedor_producto);
@@ -362,5 +386,7 @@ namespace TP_Programacion_3
         private System.Windows.Forms.TextBox caja_id_proveedor_producto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button boton_agregar_producto;
+        private System.Windows.Forms.ComboBox cb_agregar_pp;
+        private System.Windows.Forms.Label label7;
     }
 }
