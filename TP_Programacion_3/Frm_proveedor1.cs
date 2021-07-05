@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios.Proveedores;
 using System.Collections;
+using Negocios;
 
 namespace TP_Programacion_3
 {
@@ -17,48 +18,87 @@ namespace TP_Programacion_3
         public Frm_proveedor1()
         {
             InitializeComponent();
+
+            dgv_proveedor.DataSource = Proveedor.TraerTodos();
         }
 
         private void boton_agregar_Click(object sender, EventArgs e)
         {
             string nombre = caja_nombre.Text.Trim();
             string direccion = caja_direccion.Text.Trim();
-            string[] telefonos = caja_telefonos.Text.Split(' ');
+            string telefonos = caja_telefonos.Text.Trim() ;
             int id = Int32.Parse(caja_id_proveedor.Text.Trim());
             string tipo = cb_tipo_proveedor.Text;
-            int dni = Convert.ToInt32(caja_dni.Text.Trim());
-            int cuit = Convert.ToInt32(caja_cuit.Text.Trim());
-            int nro_ibb = Convert.ToInt32(caja_nro_ibb.Text.Trim());
+           
+            
+            bool estado;
 
             if (cb_tipo_proveedor.Text.Equals("Minorista"))
             {
+                int dni = Convert.ToInt32(caja_dni.Text.Trim());
                 Proveedor_Minorista proveedor_Minorista = new Proveedor_Minorista(id, nombre, direccion, telefonos, dni);
-                bool estado = proveedor_Minorista.Guardar();
+                estado = proveedor_Minorista.Guardar();
+                if (estado)
+                {
+                    Funciones.MOK(this, proveedor_Minorista.Mensaje);
+                    caja_nombre.Text = "";
+                    caja_direccion.Text = "";
+                    caja_telefonos.Text = "";
+                    caja_dni.Text = "";
+                    caja_id_proveedor.Text = "0";
+                }
+                else
+                {
+                    Funciones.MError(this, proveedor_Minorista.Mensaje);
+                    caja_nombre.Text = "";
+                    caja_direccion.Text = "";
+                    caja_telefonos.Text = "";
+                    caja_dni.Text = "";
+                    caja_id_proveedor.Text = "0";
+                }
             }
             else
             {
+                int cuit = Convert.ToInt32(caja_cuit.Text.Trim());
+                int nro_ibb = Convert.ToInt32(caja_nro_ibb.Text.Trim());
                 Proveedor_Mayorista proveedor_Mayorista = new Proveedor_Mayorista(id, nombre, direccion, telefonos, cuit, nro_ibb);
-                bool estado = proveedor_Mayorista.Guardar();
+                estado = proveedor_Mayorista.Guardar();
+                if (estado)
+                {
+                    Funciones.MOK(this, proveedor_Mayorista.Mensaje);
+                    caja_nombre.Text = "";
+                    caja_direccion.Text = "";
+                    caja_telefonos.Text = "";
+                    caja_cuit.Text = "";
+                    caja_nro_ibb.Text = "";
+                    caja_id_proveedor.Text = "0";
+                }
+                else
+                {
+                    Funciones.MError(this, proveedor_Mayorista.Mensaje);
+                    caja_nombre.Text = "";
+                    caja_direccion.Text = "";
+                    caja_telefonos.Text = "";
+                    caja_cuit.Text = "";
+                    caja_nro_ibb.Text = "";
+                    caja_id_proveedor.Text = "0";
+                }
             }
             
            
             
 
-            if (estado)
-            {
-                Funciones.MOK(this, marca.Mensaje);
-                caja_nombre.Text = "";
-                caja_descripcion.Text = "";
-                caja_id_marca.Text = "0";
-            }
-            else
-            {
-                Funciones.MError(this, marca.Mensaje);
-                caja_nombre.Text = "";
-                caja_descripcion.Text = "";
-                caja_id_marca.Text = "0";
-            }
+            
+        }
 
+
+        private void boton_agregar_producto_Click(object sender, EventArgs e)
+        {
+            string[] id_producto = caja_id_productos.Text.Trim().Split(' ');
+            string id_proveedor = caja_id_proveedor_producto.Text.Trim();
+
+            Proveedor_Producto pp = new Proveedor_Producto(int.Parse(id_proveedor), id_producto);
+            estado = pp.Guardar();
         }
 
         private void cb_tipo_proveedor_SelectionChangeCommitted(object sender, EventArgs e)
@@ -83,5 +123,7 @@ namespace TP_Programacion_3
                     break;
             }
         }
+
+       
     }
 }

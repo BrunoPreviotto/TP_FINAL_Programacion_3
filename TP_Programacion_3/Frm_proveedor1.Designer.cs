@@ -47,6 +47,16 @@ namespace TP_Programacion_3
             this.etiqueta_cuit = new System.Windows.Forms.Label();
             this.etiqueta_nro_ibb = new System.Windows.Forms.Label();
             this.caja_nro_ibb = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.caja_id_productos = new System.Windows.Forms.TextBox();
+            this.dgv_proveedor = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.caja_id_proveedor_producto = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.boton_agregar_producto = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // boton_eliminar
@@ -210,11 +220,93 @@ namespace TP_Programacion_3
             this.caja_nro_ibb.TabIndex = 23;
             this.caja_nro_ibb.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(329, 303);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Agregar productos a proveedor";
+            // 
+            // caja_id_productos
+            // 
+            this.caja_id_productos.Location = new System.Drawing.Point(332, 351);
+            this.caja_id_productos.Multiline = true;
+            this.caja_id_productos.Name = "caja_id_productos";
+            this.caja_id_productos.Size = new System.Drawing.Size(100, 55);
+            this.caja_id_productos.TabIndex = 25;
+            // 
+            // dgv_proveedor
+            // 
+            this.dgv_proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_proveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.nombre});
+            this.dgv_proveedor.Location = new System.Drawing.Point(248, 134);
+            this.dgv_proveedor.Name = "dgv_proveedor";
+            this.dgv_proveedor.Size = new System.Drawing.Size(249, 146);
+            this.dgv_proveedor.TabIndex = 26;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Id proveedor";
+            this.id.Name = "id";
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(246, 351);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "id/s producto/s";
+            // 
+            // caja_id_proveedor_producto
+            // 
+            this.caja_id_proveedor_producto.Location = new System.Drawing.Point(332, 412);
+            this.caja_id_proveedor_producto.Name = "caja_id_proveedor_producto";
+            this.caja_id_proveedor_producto.Size = new System.Drawing.Size(100, 20);
+            this.caja_id_proveedor_producto.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(245, 412);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "id proveedor";
+            // 
+            // boton_agregar_producto
+            // 
+            this.boton_agregar_producto.Location = new System.Drawing.Point(357, 438);
+            this.boton_agregar_producto.Name = "boton_agregar_producto";
+            this.boton_agregar_producto.Size = new System.Drawing.Size(75, 23);
+            this.boton_agregar_producto.TabIndex = 30;
+            this.boton_agregar_producto.Text = "Agregar";
+            this.boton_agregar_producto.UseVisualStyleBackColor = true;
+            this.boton_agregar_producto.Click += new System.EventHandler(this.boton_agregar_producto_Click);
+            // 
             // Frm_proveedor1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(509, 506);
+            this.Controls.Add(this.boton_agregar_producto);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.caja_id_proveedor_producto);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dgv_proveedor);
+            this.Controls.Add(this.caja_id_productos);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.caja_nro_ibb);
             this.Controls.Add(this.etiqueta_nro_ibb);
             this.Controls.Add(this.etiqueta_cuit);
@@ -235,6 +327,7 @@ namespace TP_Programacion_3
             this.Controls.Add(this.lab);
             this.Name = "Frm_proveedor1";
             this.Text = "Frm_proveedor1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +353,14 @@ namespace TP_Programacion_3
         private System.Windows.Forms.Label etiqueta_cuit;
         private System.Windows.Forms.Label etiqueta_nro_ibb;
         private System.Windows.Forms.TextBox caja_nro_ibb;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox caja_id_productos;
+        private System.Windows.Forms.DataGridView dgv_proveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox caja_id_proveedor_producto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button boton_agregar_producto;
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="Proveedores\Proveedor.cs" />
     <Compile Include="Proveedores\Proveedor_Mayorista.cs" />
     <Compile Include="Proveedores\Proveedor_Minorista.cs" />
+    <Compile Include="Proveedor_Producto.cs" />
     <Compile Include="Sucursal.cs" />
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
