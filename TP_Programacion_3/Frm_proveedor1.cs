@@ -137,6 +137,21 @@ namespace TP_Programacion_3
             }
         }
 
-       
+        private void boton_limpiar_Click(object sender, EventArgs e)
+        {
+            caja_nombre.Text = "";
+            caja_direccion.Text = "";
+            caja_telefonos.Text = "";
+            caja_dni.Text = "";
+            caja_cuit.Text = "";
+            caja_nro_ibb.Text = "";
+            caja_id_productos.Text = "";
+            caja_id_proveedor_producto.Text = "";
+        }
+
+        private void boton_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

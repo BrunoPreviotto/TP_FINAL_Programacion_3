@@ -37,6 +37,10 @@ namespace Negocios
             this.descripcion = descripcion;
         }
 
+        public override string ToString()
+        {
+            return $"Marca: {nombre}, id: {id_marca},";
+        }
         public bool Guardar()
         {
             int resultado = 0;

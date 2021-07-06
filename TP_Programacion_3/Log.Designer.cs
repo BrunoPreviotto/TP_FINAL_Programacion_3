@@ -57,28 +57,28 @@ namespace TP_Programacion_3
             // etiqueta_nombre
             // 
             this.etiqueta_nombre.AutoSize = true;
-            this.etiqueta_nombre.Location = new System.Drawing.Point(12, 34);
+            this.etiqueta_nombre.Location = new System.Drawing.Point(12, 41);
             this.etiqueta_nombre.Name = "etiqueta_nombre";
             this.etiqueta_nombre.Size = new System.Drawing.Size(44, 13);
-            this.etiqueta_nombre.TabIndex = 2;
+            this.etiqueta_nombre.TabIndex = 4;
             this.etiqueta_nombre.Text = "Nombre";
             // 
             // etiqueta_sucursal
             // 
             this.etiqueta_sucursal.AutoSize = true;
-            this.etiqueta_sucursal.Location = new System.Drawing.Point(12, 115);
+            this.etiqueta_sucursal.Location = new System.Drawing.Point(12, 123);
             this.etiqueta_sucursal.Name = "etiqueta_sucursal";
             this.etiqueta_sucursal.Size = new System.Drawing.Size(48, 13);
-            this.etiqueta_sucursal.TabIndex = 3;
+            this.etiqueta_sucursal.TabIndex = 6;
             this.etiqueta_sucursal.Text = "Sucursal";
             // 
             // etiqueta_contrasena
             // 
             this.etiqueta_contrasena.AutoSize = true;
-            this.etiqueta_contrasena.Location = new System.Drawing.Point(12, 74);
+            this.etiqueta_contrasena.Location = new System.Drawing.Point(12, 81);
             this.etiqueta_contrasena.Name = "etiqueta_contrasena";
             this.etiqueta_contrasena.Size = new System.Drawing.Size(61, 13);
-            this.etiqueta_contrasena.TabIndex = 4;
+            this.etiqueta_contrasena.TabIndex = 5;
             this.etiqueta_contrasena.Text = "Contraseña";
             // 
             // c_caja_sucursal
@@ -87,7 +87,7 @@ namespace TP_Programacion_3
             this.c_caja_sucursal.Location = new System.Drawing.Point(79, 115);
             this.c_caja_sucursal.Name = "c_caja_sucursal";
             this.c_caja_sucursal.Size = new System.Drawing.Size(121, 21);
-            this.c_caja_sucursal.TabIndex = 5;
+            this.c_caja_sucursal.TabIndex = 2;
             this.c_caja_sucursal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.c_caja_sucursal_KeyPress);
             // 
             // boton_entrar
@@ -95,7 +95,7 @@ namespace TP_Programacion_3
             this.boton_entrar.Location = new System.Drawing.Point(272, 115);
             this.boton_entrar.Name = "boton_entrar";
             this.boton_entrar.Size = new System.Drawing.Size(75, 23);
-            this.boton_entrar.TabIndex = 6;
+            this.boton_entrar.TabIndex = 3;
             this.boton_entrar.Text = "Entrar";
             this.boton_entrar.UseVisualStyleBackColor = true;
             this.boton_entrar.Click += new System.EventHandler(this.boton_entrar_Click);
@@ -113,7 +113,10 @@ namespace TP_Programacion_3
             this.Controls.Add(this.caja_contrasena);
             this.Controls.Add(this.caja_nombre);
             this.Name = "Log";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "INGRESAR";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

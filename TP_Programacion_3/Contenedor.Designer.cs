@@ -34,10 +34,11 @@ namespace TP_Programacion_3
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sucursalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,10 +48,11 @@ namespace TP_Programacion_3
             this.inicioToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.marcaToolStripMenuItem,
-            this.proveedorToolStripMenuItem});
+            this.proveedorToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(598, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(769, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,6 +88,20 @@ namespace TP_Programacion_3
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
+            // 
+            // agregarToolStripMenuItem
+            // 
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.agregarToolStripMenuItem.Text = "Agregar";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
+            // 
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
@@ -100,30 +116,24 @@ namespace TP_Programacion_3
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
-            // buscarToolStripMenuItem
+            // salirToolStripMenuItem
             // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
-            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
-            // 
-            // agregarToolStripMenuItem
-            // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar";
-            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Contenedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 368);
+            this.ClientSize = new System.Drawing.Size(769, 515);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Contenedor";
-            this.Text = "Contenedor";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -142,5 +152,6 @@ namespace TP_Programacion_3
         private System.Windows.Forms.ToolStripMenuItem proveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

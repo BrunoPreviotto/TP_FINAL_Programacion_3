@@ -58,6 +58,8 @@ namespace TP_Programacion_3
             this.boton_agregar_producto = new System.Windows.Forms.Button();
             this.cb_agregar_pp = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.boton_salir = new System.Windows.Forms.Button();
+            this.boton_limpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +68,7 @@ namespace TP_Programacion_3
             this.boton_eliminar.Location = new System.Drawing.Point(281, 78);
             this.boton_eliminar.Name = "boton_eliminar";
             this.boton_eliminar.Size = new System.Drawing.Size(75, 23);
-            this.boton_eliminar.TabIndex = 11;
+            this.boton_eliminar.TabIndex = 9;
             this.boton_eliminar.Text = "Eliminar";
             this.boton_eliminar.UseVisualStyleBackColor = true;
             // 
@@ -75,67 +77,67 @@ namespace TP_Programacion_3
             this.boton_agregar.Location = new System.Drawing.Point(281, 35);
             this.boton_agregar.Name = "boton_agregar";
             this.boton_agregar.Size = new System.Drawing.Size(75, 23);
-            this.boton_agregar.TabIndex = 10;
+            this.boton_agregar.TabIndex = 8;
             this.boton_agregar.Text = "Agregar";
             this.boton_agregar.UseVisualStyleBackColor = true;
             this.boton_agregar.Click += new System.EventHandler(this.boton_agregar_Click);
             // 
             // caja_direccion
             // 
-            this.caja_direccion.Location = new System.Drawing.Point(103, 76);
+            this.caja_direccion.Location = new System.Drawing.Point(103, 89);
             this.caja_direccion.Name = "caja_direccion";
             this.caja_direccion.Size = new System.Drawing.Size(100, 20);
-            this.caja_direccion.TabIndex = 9;
+            this.caja_direccion.TabIndex = 3;
             // 
             // etiqueta_direccion
             // 
             this.etiqueta_direccion.AutoSize = true;
-            this.etiqueta_direccion.Location = new System.Drawing.Point(31, 76);
+            this.etiqueta_direccion.Location = new System.Drawing.Point(21, 96);
             this.etiqueta_direccion.Name = "etiqueta_direccion";
             this.etiqueta_direccion.Size = new System.Drawing.Size(52, 13);
-            this.etiqueta_direccion.TabIndex = 8;
+            this.etiqueta_direccion.TabIndex = 17;
             this.etiqueta_direccion.Text = "Direccion";
             // 
             // caja_nombre
             // 
-            this.caja_nombre.Location = new System.Drawing.Point(103, 50);
+            this.caja_nombre.Location = new System.Drawing.Point(103, 63);
             this.caja_nombre.Name = "caja_nombre";
             this.caja_nombre.Size = new System.Drawing.Size(100, 20);
-            this.caja_nombre.TabIndex = 7;
+            this.caja_nombre.TabIndex = 2;
             // 
             // lab
             // 
             this.lab.AutoSize = true;
-            this.lab.Location = new System.Drawing.Point(31, 50);
+            this.lab.Location = new System.Drawing.Point(21, 70);
             this.lab.Name = "lab";
             this.lab.Size = new System.Drawing.Size(44, 13);
-            this.lab.TabIndex = 6;
+            this.lab.TabIndex = 16;
             this.lab.Text = "Nombre";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 102);
+            this.label1.Location = new System.Drawing.Point(21, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 12;
+            this.label1.TabIndex = 18;
             this.label1.Text = "Telefono/s";
             // 
             // caja_telefonos
             // 
-            this.caja_telefonos.Location = new System.Drawing.Point(103, 102);
+            this.caja_telefonos.Location = new System.Drawing.Point(103, 115);
             this.caja_telefonos.Multiline = true;
             this.caja_telefonos.Name = "caja_telefonos";
             this.caja_telefonos.Size = new System.Drawing.Size(100, 55);
-            this.caja_telefonos.TabIndex = 13;
+            this.caja_telefonos.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 163);
+            this.label2.Location = new System.Drawing.Point(21, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 14;
+            this.label2.TabIndex = 19;
             this.label2.Text = "Tipo";
             // 
             // cb_tipo_proveedor
@@ -144,28 +146,28 @@ namespace TP_Programacion_3
             this.cb_tipo_proveedor.Items.AddRange(new object[] {
             "Minorista",
             "Mayorista"});
-            this.cb_tipo_proveedor.Location = new System.Drawing.Point(103, 163);
+            this.cb_tipo_proveedor.Location = new System.Drawing.Point(103, 176);
             this.cb_tipo_proveedor.Name = "cb_tipo_proveedor";
             this.cb_tipo_proveedor.Size = new System.Drawing.Size(121, 21);
-            this.cb_tipo_proveedor.TabIndex = 15;
+            this.cb_tipo_proveedor.TabIndex = 5;
             this.cb_tipo_proveedor.SelectionChangeCommitted += new System.EventHandler(this.cb_tipo_proveedor_SelectionChangeCommitted);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 24);
+            this.label3.Location = new System.Drawing.Point(21, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Nro Proveedor";
             // 
             // caja_id_proveedor
             // 
             this.caja_id_proveedor.Enabled = false;
-            this.caja_id_proveedor.Location = new System.Drawing.Point(103, 24);
+            this.caja_id_proveedor.Location = new System.Drawing.Point(103, 38);
             this.caja_id_proveedor.Name = "caja_id_proveedor";
             this.caja_id_proveedor.Size = new System.Drawing.Size(100, 20);
-            this.caja_id_proveedor.TabIndex = 17;
+            this.caja_id_proveedor.TabIndex = 1;
             this.caja_id_proveedor.Text = "0";
             // 
             // caja_dni
@@ -179,7 +181,7 @@ namespace TP_Programacion_3
             // etiqueta_dni
             // 
             this.etiqueta_dni.AutoSize = true;
-            this.etiqueta_dni.Location = new System.Drawing.Point(31, 203);
+            this.etiqueta_dni.Location = new System.Drawing.Point(21, 210);
             this.etiqueta_dni.Name = "etiqueta_dni";
             this.etiqueta_dni.Size = new System.Drawing.Size(26, 13);
             this.etiqueta_dni.TabIndex = 19;
@@ -191,26 +193,26 @@ namespace TP_Programacion_3
             this.caja_cuit.Location = new System.Drawing.Point(103, 203);
             this.caja_cuit.Name = "caja_cuit";
             this.caja_cuit.Size = new System.Drawing.Size(100, 20);
-            this.caja_cuit.TabIndex = 20;
+            this.caja_cuit.TabIndex = 6;
             this.caja_cuit.Visible = false;
             // 
             // etiqueta_cuit
             // 
             this.etiqueta_cuit.AutoSize = true;
-            this.etiqueta_cuit.Location = new System.Drawing.Point(31, 203);
+            this.etiqueta_cuit.Location = new System.Drawing.Point(21, 210);
             this.etiqueta_cuit.Name = "etiqueta_cuit";
             this.etiqueta_cuit.Size = new System.Drawing.Size(32, 13);
-            this.etiqueta_cuit.TabIndex = 21;
+            this.etiqueta_cuit.TabIndex = 20;
             this.etiqueta_cuit.Text = "CUIT";
             this.etiqueta_cuit.Visible = false;
             // 
             // etiqueta_nro_ibb
             // 
             this.etiqueta_nro_ibb.AutoSize = true;
-            this.etiqueta_nro_ibb.Location = new System.Drawing.Point(31, 238);
+            this.etiqueta_nro_ibb.Location = new System.Drawing.Point(21, 236);
             this.etiqueta_nro_ibb.Name = "etiqueta_nro_ibb";
             this.etiqueta_nro_ibb.Size = new System.Drawing.Size(47, 13);
-            this.etiqueta_nro_ibb.TabIndex = 22;
+            this.etiqueta_nro_ibb.TabIndex = 21;
             this.etiqueta_nro_ibb.Text = "Nro IBB ";
             this.etiqueta_nro_ibb.Visible = false;
             // 
@@ -219,25 +221,25 @@ namespace TP_Programacion_3
             this.caja_nro_ibb.Location = new System.Drawing.Point(103, 229);
             this.caja_nro_ibb.Name = "caja_nro_ibb";
             this.caja_nro_ibb.Size = new System.Drawing.Size(100, 20);
-            this.caja_nro_ibb.TabIndex = 23;
+            this.caja_nro_ibb.TabIndex = 7;
             this.caja_nro_ibb.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(329, 303);
+            this.label4.Location = new System.Drawing.Point(308, 341);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 13);
-            this.label4.TabIndex = 24;
+            this.label4.TabIndex = 22;
             this.label4.Text = "Agregar productos a proveedor";
             // 
             // caja_id_productos
             // 
-            this.caja_id_productos.Location = new System.Drawing.Point(332, 351);
+            this.caja_id_productos.Location = new System.Drawing.Point(332, 357);
             this.caja_id_productos.Multiline = true;
             this.caja_id_productos.Name = "caja_id_productos";
             this.caja_id_productos.Size = new System.Drawing.Size(100, 55);
-            this.caja_id_productos.TabIndex = 25;
+            this.caja_id_productos.TabIndex = 11;
             // 
             // dgv_proveedor
             // 
@@ -248,7 +250,7 @@ namespace TP_Programacion_3
             this.dgv_proveedor.Location = new System.Drawing.Point(248, 134);
             this.dgv_proveedor.Name = "dgv_proveedor";
             this.dgv_proveedor.Size = new System.Drawing.Size(249, 146);
-            this.dgv_proveedor.TabIndex = 26;
+            this.dgv_proveedor.TabIndex = 10;
             // 
             // id
             // 
@@ -265,26 +267,26 @@ namespace TP_Programacion_3
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 351);
+            this.label5.Location = new System.Drawing.Point(246, 399);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 27;
+            this.label5.TabIndex = 23;
             this.label5.Text = "id/s producto/s";
             // 
             // caja_id_proveedor_producto
             // 
-            this.caja_id_proveedor_producto.Location = new System.Drawing.Point(332, 412);
+            this.caja_id_proveedor_producto.Location = new System.Drawing.Point(332, 418);
             this.caja_id_proveedor_producto.Name = "caja_id_proveedor_producto";
             this.caja_id_proveedor_producto.Size = new System.Drawing.Size(100, 20);
-            this.caja_id_proveedor_producto.TabIndex = 28;
+            this.caja_id_proveedor_producto.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(245, 412);
+            this.label6.Location = new System.Drawing.Point(246, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 29;
+            this.label6.TabIndex = 24;
             this.label6.Text = "id proveedor";
             // 
             // boton_agregar_producto
@@ -292,7 +294,7 @@ namespace TP_Programacion_3
             this.boton_agregar_producto.Location = new System.Drawing.Point(357, 471);
             this.boton_agregar_producto.Name = "boton_agregar_producto";
             this.boton_agregar_producto.Size = new System.Drawing.Size(75, 23);
-            this.boton_agregar_producto.TabIndex = 30;
+            this.boton_agregar_producto.TabIndex = 14;
             this.boton_agregar_producto.Text = "Agregar";
             this.boton_agregar_producto.UseVisualStyleBackColor = true;
             this.boton_agregar_producto.Click += new System.EventHandler(this.boton_agregar_producto_Click);
@@ -306,7 +308,7 @@ namespace TP_Programacion_3
             this.cb_agregar_pp.Location = new System.Drawing.Point(311, 444);
             this.cb_agregar_pp.Name = "cb_agregar_pp";
             this.cb_agregar_pp.Size = new System.Drawing.Size(121, 21);
-            this.cb_agregar_pp.TabIndex = 31;
+            this.cb_agregar_pp.TabIndex = 13;
             // 
             // label7
             // 
@@ -314,14 +316,36 @@ namespace TP_Programacion_3
             this.label7.Location = new System.Drawing.Point(246, 452);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
-            this.label7.TabIndex = 32;
+            this.label7.TabIndex = 25;
             this.label7.Text = "Tipo";
+            // 
+            // boton_salir
+            // 
+            this.boton_salir.Location = new System.Drawing.Point(24, 471);
+            this.boton_salir.Name = "boton_salir";
+            this.boton_salir.Size = new System.Drawing.Size(75, 23);
+            this.boton_salir.TabIndex = 26;
+            this.boton_salir.Text = "Salir";
+            this.boton_salir.UseVisualStyleBackColor = true;
+            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
+            // 
+            // boton_limpiar
+            // 
+            this.boton_limpiar.Location = new System.Drawing.Point(24, 442);
+            this.boton_limpiar.Name = "boton_limpiar";
+            this.boton_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.boton_limpiar.TabIndex = 27;
+            this.boton_limpiar.Text = "Limpiar";
+            this.boton_limpiar.UseVisualStyleBackColor = true;
+            this.boton_limpiar.Click += new System.EventHandler(this.boton_limpiar_Click);
             // 
             // Frm_proveedor1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 506);
+            this.Controls.Add(this.boton_limpiar);
+            this.Controls.Add(this.boton_salir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cb_agregar_pp);
             this.Controls.Add(this.boton_agregar_producto);
@@ -350,7 +374,9 @@ namespace TP_Programacion_3
             this.Controls.Add(this.caja_nombre);
             this.Controls.Add(this.lab);
             this.Name = "Frm_proveedor1";
-            this.Text = "Frm_proveedor1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AGREGAR PROVEEDOR";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -388,5 +414,7 @@ namespace TP_Programacion_3
         private System.Windows.Forms.Button boton_agregar_producto;
         private System.Windows.Forms.ComboBox cb_agregar_pp;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button boton_salir;
+        private System.Windows.Forms.Button boton_limpiar;
     }
 }

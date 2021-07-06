@@ -21,9 +21,14 @@ namespace Negocios
         private Double precio;
         private string mensaje;
 
-
         public string Mensaje { get => mensaje; set => mensaje = value; }
 
+        private Producto_m Productom()
+        {
+            return new Producto_m();
+        }
+
+        public Producto() { }
         public Producto(int id_producto, string nombre, string descripcion, string marca, Double precio)
         {
             this.id_producto = id_producto;
@@ -33,10 +38,24 @@ namespace Negocios
             this.precio = precio;
         }
 
+        public override string ToString()
+        {
+            return $"Producto: {nombre}, id: {id_producto}, marca: {marca}, precio: ${precio}";
+        }
+
+        public DataTable TraerMayoristaBuscados(string producto)
+        {
+            return Productom().TraerMayoristasBuscados(producto);
+        }
 
         public static DataTable TraerTodos()
         {
             return Producto_m.TraerTodos();
+        }
+
+        public DataTable TraerMinoristasBuscados(string producto)
+        {
+            return Productom().TraerMinoristasBuscados(producto);
         }
 
         public bool Guardar()

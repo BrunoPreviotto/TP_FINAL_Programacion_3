@@ -35,11 +35,11 @@ namespace TP_Programacion_3
             this.caja_nombre = new System.Windows.Forms.TextBox();
             this.boton_guardar = new System.Windows.Forms.Button();
             this.dgv_suscursales = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boton_limpiar = new System.Windows.Forms.Button();
             this.boton_eliminar = new System.Windows.Forms.Button();
             this.boton_salir = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_suscursales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@ namespace TP_Programacion_3
             this.caja_nro_sucursal.Location = new System.Drawing.Point(135, 32);
             this.caja_nro_sucursal.Name = "caja_nro_sucursal";
             this.caja_nro_sucursal.Size = new System.Drawing.Size(100, 20);
-            this.caja_nro_sucursal.TabIndex = 2;
+            this.caja_nro_sucursal.TabIndex = 1;
             this.caja_nro_sucursal.Text = "0";
             // 
             // caja_nombre
@@ -74,14 +74,14 @@ namespace TP_Programacion_3
             this.caja_nombre.Location = new System.Drawing.Point(135, 70);
             this.caja_nombre.Name = "caja_nombre";
             this.caja_nombre.Size = new System.Drawing.Size(100, 20);
-            this.caja_nombre.TabIndex = 3;
+            this.caja_nombre.TabIndex = 2;
             // 
             // boton_guardar
             // 
             this.boton_guardar.Location = new System.Drawing.Point(370, 29);
             this.boton_guardar.Name = "boton_guardar";
             this.boton_guardar.Size = new System.Drawing.Size(75, 23);
-            this.boton_guardar.TabIndex = 4;
+            this.boton_guardar.TabIndex = 3;
             this.boton_guardar.Text = "Guardar";
             this.boton_guardar.UseVisualStyleBackColor = true;
             this.boton_guardar.Click += new System.EventHandler(this.boton_guardar_Click);
@@ -97,36 +97,6 @@ namespace TP_Programacion_3
             this.dgv_suscursales.Size = new System.Drawing.Size(404, 150);
             this.dgv_suscursales.TabIndex = 5;
             // 
-            // boton_limpiar
-            // 
-            this.boton_limpiar.Location = new System.Drawing.Point(370, 67);
-            this.boton_limpiar.Name = "boton_limpiar";
-            this.boton_limpiar.Size = new System.Drawing.Size(75, 23);
-            this.boton_limpiar.TabIndex = 6;
-            this.boton_limpiar.Text = "Limpiar";
-            this.boton_limpiar.UseVisualStyleBackColor = true;
-            this.boton_limpiar.Click += new System.EventHandler(this.boton_limpiar_Click);
-            // 
-            // boton_eliminar
-            // 
-            this.boton_eliminar.Location = new System.Drawing.Point(41, 285);
-            this.boton_eliminar.Name = "boton_eliminar";
-            this.boton_eliminar.Size = new System.Drawing.Size(75, 23);
-            this.boton_eliminar.TabIndex = 7;
-            this.boton_eliminar.Text = "Eliminar";
-            this.boton_eliminar.UseVisualStyleBackColor = true;
-            this.boton_eliminar.Click += new System.EventHandler(this.boton_eliminar_Click);
-            // 
-            // boton_salir
-            // 
-            this.boton_salir.Location = new System.Drawing.Point(370, 285);
-            this.boton_salir.Name = "boton_salir";
-            this.boton_salir.Size = new System.Drawing.Size(75, 23);
-            this.boton_salir.TabIndex = 8;
-            this.boton_salir.Text = "Salir";
-            this.boton_salir.UseVisualStyleBackColor = true;
-            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
-            // 
             // id
             // 
             this.id.DataPropertyName = "id";
@@ -140,6 +110,36 @@ namespace TP_Programacion_3
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.Width = 175;
+            // 
+            // boton_limpiar
+            // 
+            this.boton_limpiar.Location = new System.Drawing.Point(370, 67);
+            this.boton_limpiar.Name = "boton_limpiar";
+            this.boton_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.boton_limpiar.TabIndex = 4;
+            this.boton_limpiar.Text = "Limpiar";
+            this.boton_limpiar.UseVisualStyleBackColor = true;
+            this.boton_limpiar.Click += new System.EventHandler(this.boton_limpiar_Click);
+            // 
+            // boton_eliminar
+            // 
+            this.boton_eliminar.Location = new System.Drawing.Point(41, 285);
+            this.boton_eliminar.Name = "boton_eliminar";
+            this.boton_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.boton_eliminar.TabIndex = 6;
+            this.boton_eliminar.Text = "Eliminar";
+            this.boton_eliminar.UseVisualStyleBackColor = true;
+            this.boton_eliminar.Click += new System.EventHandler(this.boton_eliminar_Click);
+            // 
+            // boton_salir
+            // 
+            this.boton_salir.Location = new System.Drawing.Point(370, 285);
+            this.boton_salir.Name = "boton_salir";
+            this.boton_salir.Size = new System.Drawing.Size(75, 23);
+            this.boton_salir.TabIndex = 7;
+            this.boton_salir.Text = "Salir";
+            this.boton_salir.UseVisualStyleBackColor = true;
+            this.boton_salir.Click += new System.EventHandler(this.boton_salir_Click);
             // 
             // Frm_Sucursal
             // 
@@ -156,7 +156,9 @@ namespace TP_Programacion_3
             this.Controls.Add(this.etiqueta_nombre);
             this.Controls.Add(this.etiqueta_nro_sucursal);
             this.Name = "Frm_Sucursal";
-            this.Text = "Frm_Sucursal";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SUCURSAL";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_suscursales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

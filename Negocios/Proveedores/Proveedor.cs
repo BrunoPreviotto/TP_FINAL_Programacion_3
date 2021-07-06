@@ -27,6 +27,13 @@ namespace Negocios.Proveedores
             this.telefonos = telefonos;
         }
 
+        public Proveedor() { }
+
+        public override string ToString()
+        {
+            return $"Proveedor: {nombre}, id: {id_proveedor}, direccion: {direccion}, telefonos: {telefonos}";
+        }
+
 
         public static DataTable TraerTodos()
         {

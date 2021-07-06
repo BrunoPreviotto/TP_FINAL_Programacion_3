@@ -19,6 +19,12 @@ namespace Negocios.Proveedores
             this.nro_IBB = nro_IBB;
         }
 
+        public Proveedor_Mayorista() { }
+        public override string ToString()
+        {
+            return $"Proveedor: {nombre}, id: {id_proveedor}, direccion: {direccion}, telefonos: {telefonos}, cuit: {cuit}, numero ibb: {nro_IBB}";
+        }
+
         public bool Guardar()
         {
             int resultado = 0;

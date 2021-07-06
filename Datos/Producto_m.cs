@@ -12,7 +12,7 @@ namespace Datos
     public class Producto_m
     {
 
-
+       
 
         public int Guardar(int pid, string pmarca, string pnombre, string pdescripcion, Double pprecio, char pbaja = 'N')
         {
@@ -63,7 +63,6 @@ namespace Datos
             }
         }
 
-
         private static int Modificar(int pid, string pmarca, string pnombre, string pdescripcion, Double pprecio, char pbaja)
         {
             string sql = "Update Productos SET @marca = marca, nombre = @nombre, descripcion = @descripcion, @precio = precio, baja = @baja Where id = @id";
@@ -105,7 +104,7 @@ namespace Datos
         public static DataTable TraerTodos()
         {
             DataTable dtListaAll = new DataTable("Productos");
-            string sql = "SELECT nombre, marca, precio FROM Productos INNER JOIN Pruductos_Proveedores ON Productos.id = Pruductos_Proveedores.id_producto AND Pruductos_Proveedores.tipo = 'Minorista'";
+            string sql = "SELECT nombre, marca, precio FROM Productos INNER JOIN Pruductos_Proveedores ON Productos.id = Pruductos_Proveedores.id_producto AND Pruductos_Proveedores.tipo = 'Minorista' AND Productos.baja = 'N'";
             try
             {
                 Conexion Cx = new Conexion();
@@ -124,12 +123,47 @@ namespace Datos
 
         }
 
+        public DataTable TraerMayoristasBuscados(string producto)
+        {
+            DataTable dtListaAll = new DataTable("Productos");
+            string sql = $"SELECT nombre, marca, precio FROM Productos INNER JOIN Pruductos_Proveedores ON Productos.id = Pruductos_Proveedores.id_producto AND Pruductos_Proveedores.tipo = 'Mayorista' AND Productos.baja = 'N' AND Productos.nombre = '{producto}'";
+            try
+            {
+                Conexion Cx = new Conexion();
+                Cx.SetCommandText();
+                Cx.SetSql(sql);
+                SqlDataAdapter sqlData = new SqlDataAdapter(Cx.Comando());
+                sqlData.Fill(dtListaAll);
+            }
+            catch (Exception)
+            {
+                dtListaAll = null;
 
+            }
 
+            return dtListaAll;
+        }
 
+        public DataTable TraerMinoristasBuscados(string producto)
+        {
+            DataTable dtListaAll = new DataTable("Productos");
+            string sql = $"SELECT nombre, marca, precio FROM Productos INNER JOIN Pruductos_Proveedores ON Productos.id = Pruductos_Proveedores.id_producto AND Pruductos_Proveedores.tipo = 'Minorista' AND Productos.baja = 'N' AND Productos.nombre = '{producto}'";
+            try
+            {
+                Conexion Cx = new Conexion();
+                Cx.SetCommandText();
+                Cx.SetSql(sql);
+                SqlDataAdapter sqlData = new SqlDataAdapter(Cx.Comando());
+                sqlData.Fill(dtListaAll);
+            }
+            catch (Exception)
+            {
+                dtListaAll = null;
 
+            }
 
-
+            return dtListaAll;
+        }
     }
     
 }

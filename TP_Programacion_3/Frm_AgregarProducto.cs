@@ -49,5 +49,18 @@ namespace TP_Programacion_3
                 caja_id_producto.Text = "0";
             }
         }
+
+        private void boton_limpiar_Click(object sender, EventArgs e)
+        {
+            caja_descripcion.Text = "";
+            caja_nombre.Text = "";
+            caja_marca.Text = "";
+            caja_precio.Text = "";
+        }
+
+        private void boton_salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

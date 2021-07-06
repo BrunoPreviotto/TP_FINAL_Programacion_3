@@ -28,6 +28,11 @@ namespace Negocios
             this.nombre = pnombre;
         }
 
+        public override string ToString()
+        {
+            return $"Sucusal {nombre} id: {id_suc}";
+        }
+
         public static DataTable TraerTodos()
         {
             return Sucursal_m.TraerTodos();

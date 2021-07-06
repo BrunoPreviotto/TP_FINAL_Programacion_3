@@ -20,6 +20,11 @@ namespace Negocios.Proveedores
             this.dni = dni;
         }
 
+        public override string ToString()
+        {
+            return $"Proveedor: {nombre}, id: {id_proveedor}, direccion: {direccion}, telefonos: {telefonos}, dni: {dni}";
+        }
+
         public bool Guardar()
         {
             int resultado = 0;

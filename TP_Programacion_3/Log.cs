@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios;
+using Negocios.Proveedores;
 
 namespace TP_Programacion_3
 {
@@ -18,8 +19,9 @@ namespace TP_Programacion_3
             InitializeComponent();
 
             Sucursal suc = new Sucursal();
-            
-           
+
+            Proveedor_Mayorista p = new Proveedor_Mayorista();
+            Console.Write(p.ToString() + "hola");
             
             try
             {
